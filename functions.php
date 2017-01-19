@@ -55,4 +55,58 @@ function custom_woocommerce_auto_complete_order( $order_id ) {
 
 }
 
+//Ajax widget login-popup
+add_action( 'wp_ajax_nopriv_thim_login_ajax', 'thim_login_ajax_callback' );
+add_action( 'wp_ajax_thim_login_ajax', 'thim_login_ajax_callback' );
+if ( !function_exists( 'thim_login_ajax_callback' ) ) {
+    function thim_login_ajax_callback() {
+        //ob_start();
+        global $wpdb;
+
+        //We shall SQL prepare all inputs to avoid sql injection.
+        $username = $wpdb->prepare( $_REQUEST['username'], array() );
+        $password = $_REQUEST['password'];//$wpdb->prepare( $_REQUEST['password'] );
+        $remember = $wpdb->prepare( $_REQUEST['remember'], array() );
+        $redirect = isset( $_REQUEST['redirect'] ) ? $_REQUEST['redirect'] : false;
+
+        if ( $remember ) {
+            $remember = "true";
+        } else {
+            $remember = "false";
+        }
+
+        $login_data                  = array();
+        $login_data['user_login']    = $username;
+        $login_data['user_password'] = $password;
+        $login_data['remember']      = $remember;
+        $user_verify                 = wp_signon( $login_data, false );
+
+
+        $code = 1;
+
+        if ( is_wp_error( $user_verify ) ) {
+            $message = '<p class="message message-error">' . esc_html__( 'Wrong username or password.', 'eduma' ) . '</p>';
+            $code    = - 1;
+        } else {
+            $message = '<p class="message message-success">' . esc_html__( 'Login successful, redirecting...', 'eduma' ) . '</p>';
+        }
+
+        $response_data = array(
+            'code'    => $code,
+            'message' => $message
+        );
+
+        if ( !empty( $redirect ) ) {
+            $redirect_url = site_url() . '/profile';
+            $response_data['redirect'] = $redirect_url;
+
+        }
+
+        echo json_encode( $response_data );
+        die(); // this is required to return a proper result
+    }
+}
+
+
+
 
