@@ -1,11 +1,11 @@
 <?php
 
 function thim_child_enqueue_styles() {
-	if ( is_multisite() ) {
-		wp_enqueue_style( 'thim-child-style', get_stylesheet_uri() );
-	} else {
-		wp_enqueue_style( 'thim-parent-style', get_template_directory_uri() . '/style.css' );
-	}
+    if ( is_multisite() ) {
+        wp_enqueue_style( 'thim-child-style', get_stylesheet_uri() );
+    } else {
+        wp_enqueue_style( 'thim-parent-style', get_template_directory_uri() . '/style.css' );
+    }
 }
 
 add_action( 'wp_enqueue_scripts', 'thim_child_enqueue_styles', 100 );
@@ -35,3 +35,15 @@ function custom_override_checkout_fields( $fields ) {
     return $fields;
 }
 
+/* WooCommerce: redirection to course after purchase */
+
+add_action( 'template_redirect', 'woocommerce_redirecciona_compra_realizada' ); 
+
+function woocommerce_redirecciona_compra_realizada() {
+    global $wp;
+
+    if ( is_checkout() && ! empty( $wp->query_vars['order-received'] ) ) {
+        wp_redirect( 'http://escueladetriunfadoras.com/course/carino-tu-vales-mucho/' );
+        exit;
+    }
+}
