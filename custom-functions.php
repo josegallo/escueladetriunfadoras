@@ -2003,12 +2003,6 @@ function thim_pmpro_format_price( $formatted, $price, $pmpro_currency, $pmpro_cu
 
 
 //Ajax widget login-popup
-//old code:
-			//$response_data['redirect'] = $redirect; 
-			//new code for escueladetriunfadoras.com
-            // $redirect_url = site_url() . '/course/carino-tu-vales-mucho/';
-            // $response_data['redirect'] = $redirect_url;
-            
 add_action( 'wp_ajax_nopriv_thim_login_ajax', 'thim_login_ajax_callback' );
 add_action( 'wp_ajax_thim_login_ajax', 'thim_login_ajax_callback' );
 if ( !function_exists( 'thim_login_ajax_callback' ) ) {
@@ -2020,7 +2014,8 @@ if ( !function_exists( 'thim_login_ajax_callback' ) ) {
 		$username = $wpdb->prepare( $_REQUEST['username'], array() );
 		$password = $_REQUEST['password'];//$wpdb->prepare( $_REQUEST['password'] );
 		$remember = $wpdb->prepare( $_REQUEST['remember'], array() );
-		$redirect = isset( $_REQUEST['redirect'] ) ? $_REQUEST['redirect'] : false;
+		//$redirect = isset( $_REQUEST['redirect'] ) ? $_REQUEST['redirect'] : false;
+		$redirect = site_url() . '/course/carino-tu-vales-mucho';
 
 		if ( $remember ) {
 			$remember = "true";
@@ -2041,7 +2036,7 @@ if ( !function_exists( 'thim_login_ajax_callback' ) ) {
 			$message = '<p class="message message-error">' . esc_html__( 'Wrong username or password.', 'eduma' ) . '</p>';
 			$code    = - 1;
 		} else {
-			$message = '<p class="message message-success">' . esc_html__( 'Login successful, redirecting...', 'eduma' ) . '</p>';
+			$message = '<p class="message message-success">' . esc_html__( 'Exito, redirigiendo...', 'eduma' ) . '</p>';
 		}
 
 		$response_data = array(
@@ -2053,8 +2048,8 @@ if ( !function_exists( 'thim_login_ajax_callback' ) ) {
 			//old code:
 			//$response_data['redirect'] = $redirect; 
 			//new code for escueladetriunfadoras.com
-            $redirect_url = site_url() . '/course/carino-tu-vales-mucho/';
-            $response_data['redirect'] = $redirect_url;
+
+            		$response_data['redirect'] = $redirect;
 		}
 
 		echo json_encode( $response_data );
