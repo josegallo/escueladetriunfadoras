@@ -82,6 +82,9 @@ jQuery(document).ready(function ($) {
             var newLogoMob = $( '<img src = "http://escueladetriunfadoras.com/wp-content/uploads/2017/01/Escuela-de-Triunfadora-color.png" height="50" width="300" id = "newLogoMobId">');
             //max width
             newLogoMob.prependTo( "header#masthead .header_v3_container").css({"max-width":"250px"});
+            if( !$("#newLogoMobId").length ) {
+                return;
+            }
             //move logo 
             var xPos = parseInt($("#newLogoMobId").position().left);
             var delta = - xPos; 
