@@ -2014,8 +2014,8 @@ if ( !function_exists( 'thim_login_ajax_callback' ) ) {
 		$username = $wpdb->prepare( $_REQUEST['username'], array() );
 		$password = $_REQUEST['password'];//$wpdb->prepare( $_REQUEST['password'] );
 		$remember = $wpdb->prepare( $_REQUEST['remember'], array() );
-		//$redirect = isset( $_REQUEST['redirect'] ) ? $_REQUEST['redirect'] : false;
-		$redirect = site_url() . '/course/carino-tu-vales-mucho';
+		$redirect = isset( $_REQUEST['redirect'] ) ? $_REQUEST['redirect'] : false;
+		//$redirect = site_url() . '/course/carino-tu-vales-mucho';
 
 		if ( $remember ) {
 			$remember = "true";

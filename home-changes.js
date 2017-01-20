@@ -138,7 +138,7 @@ jQuery(document).ready(function ($) {
         //+ enviar button color coorporative, no longer needed
         //$("input.wpcf7-form-control.wpcf7-submit").css({"background-color": "#ff765b"});
         var widthW = $(window).width();
-        console.log(widthW);
+        //console.log(widthW);
         if (widthW < 750) {
             //+ delete header-escuela-desktop on mobile dispositives, no longer needed
             //$("div#toolbar").css({"display":"none"});
@@ -173,7 +173,7 @@ jQuery(document).ready(function ($) {
             $("#recursos-gratuitos-desktop-mark").hide();
         } else {
             //re-position logo desktop
-            $("header#masthead .width-logo.table-cell.sm-logo").css({"top": "30px", "left": "-100px", "min-width": "350px"});  
+            $("header#masthead .width-logo.table-cell.sm-logo").css({"top": "30px", "left": "-90px", "min-width": "350px"});  
             $("header#masthead img").css({"width": "75%", "margin-top": "1.35%", "min-width": "250px"});  
             $("header#masthead img").attr("src","http://escueladetriunfadoras.com/wp-content/uploads/2017/01/Escuela-de-Triunfadora-color.png");
             //re-appear the escuela-triunfadoras-desktop-mark block
