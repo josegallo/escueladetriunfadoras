@@ -74,7 +74,7 @@ function wp_new_user_notification( $user_id, $deprecated = null, $notify = '' ) 
 
 	$switched_locale = switch_to_locale( get_user_locale( $user ) );
 
-	$message = sprintf(__('<p>Hola %s,</p>'), $user->user_login) . "\r\n\r\n";
+	$message = __('<p>Hola!</p>') . "\r\n\r\n";
 	$message .= __('<p>Es genial que te hayas inscrito en el programa Cariño, tú vales mucho. Juntas vamos a multiplicar tu autoestima para que consigas el éxito económico.</p>') . "\r\n\r\n";
 	$message .= __('<p>Con este correo hacemos oficial que ya formas parte del programa.</p>') . "\r\n\r\n";
 	$message .= sprintf(__('<p>Tu nombre de usuario es %s,</p>'), $user->user_login) . "\r\n\r\n";
