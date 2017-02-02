@@ -261,3 +261,55 @@ jQuery(document).ready(function ($) {
             $("#recursos-gratuitos-desktop-mark").show();
         }
     }); 
+
+
+//hide students and comments from http://escueladetriunfadoras.com/register/lp-courses/
+
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        $("div#thim-course-archive div#post-6892 .course-students, div#thim-course-archive div#post-6892 .course-comments-count, div#thim-course-archive div#post-6023 .course-students, div#thim-course-archive div#post-6023 .course-comments-count").hide();
+}); 
+
+//hide students and comments from each course
+//http://escueladetriunfadoras.com/course/carino-tu-vales-mucho-premium/
+
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        $("article#post-6892 div#lp-single-course .course-review").hide();
+        $("div#tab-course-description .thim-course-info li.students-feature").hide();
+        $("div#lp-single-course div#course-landing li:nth-child(4)").hide();
+        $("div#lp-single-course .course-students, div#lp-single-course .course-comments-count").hide();
+        $("div#lp-single-course .course-review").hide();
+}); 
+
+//hide curriculum numbers
+
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        $("ul.curriculum-sections .meta-left").hide();
+}); 
+
+// color modules and 1st titles
+
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        //autoestudio 
+        $("ul.curriculum-sections li#section-83 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-84 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-85 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-90 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-93 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-98 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-102 h4.section-header").css({"color":"#ff765b"});
+        //premiun
+        $("ul.curriculum-sections li#section-103 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-104 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-105 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-110 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-118 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-122 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-123 h4.section-header").css({"color":"#ff765b"});
+        $("ul.curriculum-sections li#section-124 h4.section-header").css({"color":"#ff765b"});
+    }); 
+
+
