@@ -280,6 +280,7 @@ jQuery(document).ready(function ($) {
         $("div#lp-single-course div#course-landing li:nth-child(4)").hide();
         $("div#lp-single-course .course-students, div#lp-single-course .course-comments-count").hide();
         $("div#lp-single-course .course-review").hide();
+        $("div#thim-course-archive div#post-6892 .course-review , div#thim-course-archive div#post-6023 .course-review").hide();
 }); 
 
 //hide curriculum numbers
@@ -312,4 +313,22 @@ jQuery(document).ready(function ($) {
         $("ul.curriculum-sections li#section-124 h4.section-header").css({"color":"#ff765b"});
     }); 
 
+//problem with Tema 1. unit 4 don't showing.
 
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        $("ul.curriculum-sections li#section-130 li.course-lesson.course-item.course-item-6355.item-has-status.item-viewed.viewable").css({"display":"block"});
+        $("ul.curriculum-sections li#section-107 li.course-lesson.course-item.course-item-7063.viewable").css({"display":"block"});      
+}); 
+
+
+//code in javascript /html for https://motionmailapp.com/ counter embebed in sumome 
+
+<img  style=" display: inline-block;
+    vertical-align: middle; margin-top: 15px; width: 100%; " src="http://s.mmgo.io/t/jg9" alt="motionmailapp.com" />
+
+<script>
+$(document).ready(function(){
+    $("div#sumome-smartbar-popup .sumome-smartbar-close, div#sumome-smartbar-popup a.sumome-smartbar-link img.sumome-icon").hide();
+}); 
+</script>
