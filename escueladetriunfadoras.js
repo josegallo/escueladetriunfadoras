@@ -1,10 +1,10 @@
-    jQuery(document).ready(function ($) {
+jQuery(document).ready(function ($) {
         $=jQuery;
         //+ enviar button color coorporative, no longer needed
         //$("input.wpcf7-form-control.wpcf7-submit").css({"background-color": "#ff765b"});
         var widthW = $(window).width();
         //console.log(widthW);
-$("form#registerform div").css({"display":"none"});
+        $("form#registerform div").css({"display":"none"});
         if (widthW < 750) {
             //+ delete header-escuela-desktop on mobile dispositives, no longer needed
             //$("div#toolbar").css({"display":"none"});
@@ -62,19 +62,21 @@ $("form#registerform div").css({"display":"none"});
 
 jQuery(document).ready(function ($) {
         $=jQuery;
-        $("div#thim-course-archive div#post-6892 .course-students, div#thim-course-archive div#post-6892 .course-comments-count, div#thim-course-archive div#post-6023 .course-students, div#thim-course-archive div#post-6023 .course-comments-count").hide();
+        $("div#thim-course-archive div#post-6892 .course-students, div#thim-course-archive div#post-6892 .course-comments-count, div#thim-course-archive div#post-6023 .course-students, div#thim-course-archive div#post-6023 .course-comments-count, div#thim-course-archive div#post-7203 .course-comments-count, div#thim-course-archive div#post-7203 .course-students ").hide();
 }); 
 
 //hide students and comments from each course
-//http://escueladetriunfadoras.com/course/carino-tu-vales-mucho-premium/
+
 jQuery(document).ready(function ($) {
         $=jQuery;
         $("article#post-6892 div#lp-single-course .course-review").hide();
         $("div#tab-course-description .thim-course-info li.students-feature").hide();
         $("div#lp-single-course div#course-landing li:nth-child(4)").hide();
+        //bye, bye 
+        $("article#post-7203 div#lp-single-course div#course-learning .course-tabs ul.nav.nav-tabs li:nth-child(4)").hide();
         $("div#lp-single-course .course-students, div#lp-single-course .course-comments-count").hide();
         $("div#lp-single-course .course-review").hide();
-$("div#thim-course-archive div#post-6892 .course-review , div#thim-course-archive div#post-6023 .course-review").hide();
+        $("div#thim-course-archive div#post-6892 .course-review , div#thim-course-archive div#post-6023 .course-review, div#thim-course-archive div#post-7203 .course-review").hide();
 }); 
 
 
@@ -110,34 +112,54 @@ jQuery(document).ready(function ($) {
         $=jQuery;
 
         //autoestudio
-        $("ul.curriculum-sections li#section-218 li.course-lesson.course-item.course-item-6355.item-has-status.item-viewed.viewable").css({"display":"block"});
+        //Mod I. Tema 1. Ud 4.
+        $("ul.curriculum-sections li#section-286 li.course-lesson.course-item.course-item-6355.item-has-status.item-viewed.viewable").css({"display":"block"});
+        //$("ul.curriculum-sections li#section-218 li.course-lesson.course-item.course-item-6355.item-has-status.item-viewed.viewable").css({"display":"block"});
+        //Mod I. Tema 2 Ud 4
+        $("ul.curriculum-sections li#section-287 li.course-lesson.course-item.course-item-6360.item-has-status.item-viewed.viewable").css({"display":"block"});
         $("ul.curriculum-sections li#section-219 li.course-lesson.course-item.course-item-6360.item-has-status.item-viewed.viewable").css({"display":"block"});
+        //Mod 2. Tema 2 Ud 4
+        $("ul.curriculum-sections li#section-291 li.course-lesson.course-item.course-item-6801.item-has-status.item-viewed.viewable").css({"display":"block"});
         $("ul.curriculum-sections li#section-223 li.course-lesson.course-item.course-item-6801.item-has-status.item-viewed.viewable").css({"display":"block"});
-
+        //Mod 3. Tema 3? Ud 4
         $("ul.curriculum-sections li#section-224 li.course-lesson.course-item.course-item-6805.item-has-status.item-viewed.viewable").css({"display":"block"});
         $("ul.curriculum-sections li#section-224 ul.section-content li.course-lesson.course-item.course-item-6805.viewable").css({"display":"block"});
-
+        //Mod 3. Tema 4 Ud 4
         $("ul.curriculum-sections li#section-229 li.course-lesson.course-item.course-item-6810.item-has-status.item-viewed.viewable").css({"display":"block"});
         $("ul.curriculum-sections li#section-229 ul.section-content li.course-lesson.course-item.course-item-6810.viewable").css({"display":"block"});
+
+        $("ul.curriculum-sections li#section-297 li.course-lesson.course-item.course-item-6810.item-has-status.item-viewed.viewable").css({"display":"block"});
+        $("ul.curriculum-sections li#section-297 ul.section-content li.course-lesson.course-item.course-item-6810.viewable").css({"display":"block"});
+        //Mod 4. Tema 1 Ud 4
+
+        $("ul.curriculum-sections li#section-299 ul.section-content li.course-lesson.course-item.course-item-6816.item-has-status.item-viewed.viewable").css({"display":"block"});
+        $("ul.curriculum-sections li#section-299 ul.section-content li.course-lesson.course-item.course-item-6816.viewable").css({"display":"block"});
 
         $("ul.curriculum-sections li#section-231 ul.section-content li.course-lesson.course-item.course-item-6816.item-has-status.item-viewed.viewable").css({"display":"block"});
         $("ul.curriculum-sections li#section-231 ul.section-content li.course-lesson.course-item.course-item-6816.viewable").css({"display":"block"});
 
         //premium
-        $("div#learn-press-course-curriculum ul.curriculum-sections li#section-195 ul.section-content li.course-lesson.course-item.course-item-7063.viewable").css({"display":"block"});
+        $("div#learn-press-course-curriculum ul.curriculum-sections li#section-263 ul.section-content li.course-lesson.course-item.course-item-7063.viewable").css({"display":"block"});
         //M1. T2. U4. desactivarla
-        $("ul.curriculum-sections li#section-196 li.course-lesson.course-item.course-item-6904.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-196 ul.section-content li.course-lesson.course-item.course-item-6904.viewable").css({"display":"block"});
+        $("ul.curriculum-sections li#section-264 li.course-lesson.course-item.course-item-6904.item-has-status.item-viewed.viewable").css({"display":"block"});
+        $("ul.curriculum-sections li#section-264 ul.section-content li.course-lesson.course-item.course-item-6904.viewable").css({"display":"block"});
         //M2 T1 U4. no es lo mismo
-        $("ul.curriculum-sections li#section-200 li.course-lesson.course-item.course-item-6911.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-200 ul.section-content li.course-lesson.course-item.course-item-6911.viewable").css({"display":"block"});
+        $("ul.curriculum-sections li#section-268 li.course-lesson.course-item.course-item-6911.item-has-status.item-viewed.viewable").css({"display":"block"});
+        $("ul.curriculum-sections li#section-268 ul.section-content li.course-lesson.course-item.course-item-6911.viewable").css({"display":"block"});
         //M2 T2 U4 visualizacion
-        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-201 ul.section-content li.course-lesson.course-item.course-item-6915.viewable").css({"display":"block"});
+        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-269 ul.section-content li.course-lesson.course-item.course-item-6915.viewable").css({"display":"block"});
         //M3 T4 U4  
-        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-206 ul.section-content li.course-lesson.course-item.course-item-6923.viewable").css({"display":"block"});
+        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-274 ul.section-content li.course-lesson.course-item.course-item-6923.viewable").css({"display":"block"});
         //M4 T1 U4 sin ansiedad de rendimiento
-        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-208 ul.section-content li.course-lesson.course-item.course-item-6929.viewable").css({"display":"block"});
+        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-276 ul.section-content li.course-lesson.course-item.course-item-6929.viewable").css({"display":"block"});
         //$("ul.curriculum-sections li#section-208 ul.section-content li.course-lesson.course-item.course-item-6929.viewable").css({"display":"block"});
         //bonus1  U4 saber si tienes sueldo justo
-        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-212 ul.section-content li.course-lesson.course-item.course-item-6942.viewable").css({"display":"block"});
+        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-280 ul.section-content li.course-lesson.course-item.course-item-6942.viewable").css({"display":"block"});
+        
+        //bye bye miedo
+        //T2
+        $("ul.curriculum-sections li#section-303 li.course-lesson.course-item.course-item-7232.item-has-status.item-viewed.viewable").css({"display":"block"});
+        $("ul.curriculum-sections li#section-303 ul.section-content li.course-lesson.course-item.course-item-7232.viewable").css({"display":"block"});
+
+
     }); 
