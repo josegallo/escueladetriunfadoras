@@ -110,62 +110,26 @@ jQuery(document).ready(function ($) {
         $("ul.curriculum-sections li#section-213 h4.section-header").css({"color":"#ff765b"});
 }); 
 
-//insert selz button
-jQuery(document).ready(function ($) {
-        $=jQuery;
-        $("article#post-7203 .course-payment .course-price ").remove();
-        var PayButtonBye = "article#post-7203 .course-payment form.purchase-course.form-purchase-course";
-        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/VyvbVY$YM" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true"> if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e);} <\/script>';
-        $(PayButtonBye).html(adding);
-});
-
-//insert selz button on footer banner
+//loop
 
 jQuery(document).ready(function ($) {
         $=jQuery;
-        $("article#post-7203 .thim-course-menu-landing .thim-course-landing-button .course-price ").remove();
-        var PayButtonBye2 = "article#post-7203 .thim-course-menu-landing form.purchase-course.form-purchase-course";
-        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/VyvbVY$YM" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true"> if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e);} <\/script>';
-        $(PayButtonBye2).html(adding);
+        // ASTC = ArrayofCoursesSelzThimPressCodes
+        var ASTC = [[7203,"VyvbVY$YM"],[6892,"Vk9hw87-f"],[6023,"VyIFUC$OG"]];
+        for (var i = ASTC.length - 1; i >= 0; i--) {
+
+            //remove prices
+            $("article#post-" + ASTC[i][0] +  " .course-payment .course-price ").remove();
+            $("article#post-" + ASTC[i][0] +  " .thim-course-menu-landing .thim-course-landing-button .course-price ").remove();
+            
+            //remove woocommerce buttons and add selz widgets
+            var PayButton1 = "article#post-" + ASTC[i][0] +  " .course-payment form.purchase-course.form-purchase-course";
+            var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/' + ASTC[i][1] + '" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true">if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e); }<\/script>';
+            $(PayButton1).html(adding);
+
+            var PayButton2 = "article#post-" + ASTC[i][0] +  " .thim-course-menu-landing form.purchase-course.form-purchase-course";
+            $(PayButton2).html(adding);
+            };
 });
-
-//insert selz button on cariño premium panel
-jQuery(document).ready(function ($) {
-        $=jQuery;
-        $("article#post-6892 .course-payment .course-price ").remove();
-        var PayButtonBye = "article#post-6892 .course-payment form.purchase-course.form-purchase-course";
-        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/Vk9hw87-f" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true">if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e); }<\/script>';
-        $(PayButtonBye).html(adding);
-});
-
-//insert selz button on cariño premium footer banner 
-
-jQuery(document).ready(function ($) {
-        $=jQuery;
-        $("article#post-6892 .thim-course-menu-landing .thim-course-landing-button .course-price ").remove();
-        var PayButtonBye2 = "article#post-6892 .thim-course-menu-landing form.purchase-course.form-purchase-course";
-        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/Vk9hw87-f" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true">if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e); }<\/script>';
-        $(PayButtonBye2).html(adding);
-});
-
-//insert selz button on cariño autoestudio panel
-jQuery(document).ready(function ($) {
-        $=jQuery;
-        $("article#post-6023 .course-payment .course-price ").remove();
-        var PayButtonBye = "article#post-6023 .course-payment form.purchase-course.form-purchase-course";
-        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/VyIFUC$OG" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true">if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e); }<\/script>';
-        $(PayButtonBye).html(adding);
-});
-
-//insert selz button on cariño autoestudio footer banner 
-
-jQuery(document).ready(function ($) {
-        $=jQuery;
-        $("article#post-6023 .thim-course-menu-landing .thim-course-landing-button .course-price ").remove();
-        var PayButtonBye2 = "article#post-6023 .thim-course-menu-landing form.purchase-course.form-purchase-course";
-        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/VyIFUC$OG" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true">if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e); }<\/script>';
-        $(PayButtonBye2).html(adding);
-});
-
 
 
