@@ -59,38 +59,35 @@ jQuery(document).ready(function ($) {
         }
     }); 
 //hide students and comments from http://escueladetriunfadoras.com/register/lp-courses/
-
 jQuery(document).ready(function ($) {
         $=jQuery;
+        //hide stud and comment in programs
         $("div#thim-course-archive div#post-6892 .course-students, div#thim-course-archive div#post-6892 .course-comments-count, div#thim-course-archive div#post-6023 .course-students, div#thim-course-archive div#post-6023 .course-comments-count, div#thim-course-archive div#post-7203 .course-comments-count, div#thim-course-archive div#post-7203 .course-students ").hide();
 }); 
 
 //hide students and comments from each course
-
 jQuery(document).ready(function ($) {
         $=jQuery;
-        //pending refactoring all this script from *1 to *2
-        //*1
-        $("article#post-6892 div#lp-single-course .course-review").hide();
+        //hide at the botton of the panel in proposal courses
         $("div#tab-course-description .thim-course-info li.students-feature").hide();
-        //bye, bye 
-        $("article#post-7203 div#lp-single-course div#course-learning .course-tabs ul.nav.nav-tabs li:nth-child(4)").hide();
         $("div#lp-single-course .course-students, div#lp-single-course .course-comments-count").hide();
         $("div#lp-single-course .course-review").hide();
-        $("div#thim-course-archive div#post-6892 .course-review , div#thim-course-archive div#post-6023 .course-review, div#thim-course-archive div#post-7203 .course-review").hide();
-        //*2
-        //hide opiniones sections in each course
+        //hide opiniones sections in panel
         $("article#post-7203 .course-summary div#course-landing .course-tabs ul.nav.nav-tabs li:nth-child(4)").hide();
         $("article#post-6892 .course-summary div#course-landing .course-tabs ul.nav.nav-tabs li:nth-child(4)").hide();
         $("article#post-6023 .course-summary div#course-landing .course-tabs ul.nav.nav-tabs li:nth-child(4)").hide();
+        //hide opiniones sections in footer banner
+        $("ul.thim-course-landing-tab li:nth-child(4)").hide();
+
 }); 
 
-
+//hide numbers of units
 jQuery(document).ready(function ($) {
         $=jQuery;
         $("ul.curriculum-sections .meta-left").hide();
 }); 
 
+//color modules
 jQuery(document).ready(function ($) {
         $=jQuery;
         //autoestudio 
@@ -111,61 +108,64 @@ jQuery(document).ready(function ($) {
         $("ul.curriculum-sections li#section-211 h4.section-header").css({"color":"#ff765b"});
         $("ul.curriculum-sections li#section-212 h4.section-header").css({"color":"#ff765b"});
         $("ul.curriculum-sections li#section-213 h4.section-header").css({"color":"#ff765b"});
-    }); 
+}); 
 
-//show hidden units
+//insert selz button
 jQuery(document).ready(function ($) {
         $=jQuery;
+        $("article#post-7203 .course-payment .course-price ").remove();
+        var PayButtonBye = "article#post-7203 .course-payment form.purchase-course.form-purchase-course";
+        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/VyvbVY$YM" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true"> if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e);} <\/script>';
+        $(PayButtonBye).html(adding);
+});
 
-        //autoestudio
-        //Mod I. Tema 1. Ud 4.
-        $("ul.curriculum-sections li#section-286 li.course-lesson.course-item.course-item-6355.item-has-status.item-viewed.viewable").css({"display":"block"});
-        //$("ul.curriculum-sections li#section-218 li.course-lesson.course-item.course-item-6355.item-has-status.item-viewed.viewable").css({"display":"block"});
-        //Mod I. Tema 2 Ud 4
-        $("ul.curriculum-sections li#section-287 li.course-lesson.course-item.course-item-6360.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-219 li.course-lesson.course-item.course-item-6360.item-has-status.item-viewed.viewable").css({"display":"block"});
-        //Mod 2. Tema 2 Ud 4
-        $("ul.curriculum-sections li#section-291 li.course-lesson.course-item.course-item-6801.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-223 li.course-lesson.course-item.course-item-6801.item-has-status.item-viewed.viewable").css({"display":"block"});
-        //Mod 3. Tema 3? Ud 4
-        $("ul.curriculum-sections li#section-224 li.course-lesson.course-item.course-item-6805.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-224 ul.section-content li.course-lesson.course-item.course-item-6805.viewable").css({"display":"block"});
-        //Mod 3. Tema 4 Ud 4
-        $("ul.curriculum-sections li#section-229 li.course-lesson.course-item.course-item-6810.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-229 ul.section-content li.course-lesson.course-item.course-item-6810.viewable").css({"display":"block"});
+//insert selz button on footer banner
 
-        $("ul.curriculum-sections li#section-297 li.course-lesson.course-item.course-item-6810.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-297 ul.section-content li.course-lesson.course-item.course-item-6810.viewable").css({"display":"block"});
-        //Mod 4. Tema 1 Ud 4
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        $("article#post-7203 .thim-course-menu-landing .thim-course-landing-button .course-price ").remove();
+        var PayButtonBye2 = "article#post-7203 .thim-course-menu-landing form.purchase-course.form-purchase-course";
+        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/VyvbVY$YM" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true"> if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e);} <\/script>';
+        $(PayButtonBye2).html(adding);
+});
 
-        $("ul.curriculum-sections li#section-299 ul.section-content li.course-lesson.course-item.course-item-6816.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-299 ul.section-content li.course-lesson.course-item.course-item-6816.viewable").css({"display":"block"});
+//insert selz button on cariño premium panel
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        $("article#post-6892 .course-payment .course-price ").remove();
+        var PayButtonBye = "article#post-6892 .course-payment form.purchase-course.form-purchase-course";
+        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/Vk9hw87-f" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true">if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e); }<\/script>';
+        $(PayButtonBye).html(adding);
+});
 
-        $("ul.curriculum-sections li#section-231 ul.section-content li.course-lesson.course-item.course-item-6816.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-231 ul.section-content li.course-lesson.course-item.course-item-6816.viewable").css({"display":"block"});
+//insert selz button on cariño premium footer banner 
 
-        //premium
-        $("div#learn-press-course-curriculum ul.curriculum-sections li#section-263 ul.section-content li.course-lesson.course-item.course-item-7063.viewable").css({"display":"block"});
-        //M1. T2. U4. desactivarla
-        $("ul.curriculum-sections li#section-264 li.course-lesson.course-item.course-item-6904.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-264 ul.section-content li.course-lesson.course-item.course-item-6904.viewable").css({"display":"block"});
-        //M2 T1 U4. no es lo mismo
-        $("ul.curriculum-sections li#section-268 li.course-lesson.course-item.course-item-6911.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-268 ul.section-content li.course-lesson.course-item.course-item-6911.viewable").css({"display":"block"});
-        //M2 T2 U4 visualizacion
-        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-269 ul.section-content li.course-lesson.course-item.course-item-6915.viewable").css({"display":"block"});
-        //M3 T4 U4  
-        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-274 ul.section-content li.course-lesson.course-item.course-item-6923.viewable").css({"display":"block"});
-        //M4 T1 U4 sin ansiedad de rendimiento
-        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-276 ul.section-content li.course-lesson.course-item.course-item-6929.viewable").css({"display":"block"});
-        //$("ul.curriculum-sections li#section-208 ul.section-content li.course-lesson.course-item.course-item-6929.viewable").css({"display":"block"});
-        //bonus1  U4 saber si tienes sueldo justo
-        $("div#learn-press-course-curriculum  ul.curriculum-sections li#section-280 ul.section-content li.course-lesson.course-item.course-item-6942.viewable").css({"display":"block"});
-        
-        //bye bye miedo
-        //T2
-        $("ul.curriculum-sections li#section-303 li.course-lesson.course-item.course-item-7232.item-has-status.item-viewed.viewable").css({"display":"block"});
-        $("ul.curriculum-sections li#section-303 ul.section-content li.course-lesson.course-item.course-item-7232.viewable").css({"display":"block"});
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        $("article#post-6892 .thim-course-menu-landing .thim-course-landing-button .course-price ").remove();
+        var PayButtonBye2 = "article#post-6892 .thim-course-menu-landing form.purchase-course.form-purchase-course";
+        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/Vk9hw87-f" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true">if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e); }<\/script>';
+        $(PayButtonBye2).html(adding);
+});
+
+//insert selz button on cariño autoestudio panel
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        $("article#post-6023 .course-payment .course-price ").remove();
+        var PayButtonBye = "article#post-6023 .course-payment form.purchase-course.form-purchase-course";
+        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/VyIFUC$OG" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true">if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e); }<\/script>';
+        $(PayButtonBye).html(adding);
+});
+
+//insert selz button on cariño autoestudio footer banner 
+
+jQuery(document).ready(function ($) {
+        $=jQuery;
+        $("article#post-6023 .thim-course-menu-landing .thim-course-landing-button .course-price ").remove();
+        var PayButtonBye2 = "article#post-6023 .thim-course-menu-landing form.purchase-course.form-purchase-course";
+        var adding = '<script data-selz-t="_selz-btn-default" data-selz-b="http://selz.co/VyIFUC$OG" data-text="Inscríbete" data-selz-a="modal" data-selz-checkout="true" data-selz-cb="b81974" data-selz-ct="ffffff" data-selz-chbg="b81974" data-selz-chtx="ffffff" data-selz-lg="true">if (typeof _$elz === "undefined") { var _$elz = {}; } if (typeof _$elz.b === "undefined") { _$elz.b = { e: document.createElement("script") }; _$elz.b.e.src = "https://selz.com/embed/button"; document.body.appendChild(_$elz.b.e); }<\/script>';
+        $(PayButtonBye2).html(adding);
+});
 
 
-    }); 
+
