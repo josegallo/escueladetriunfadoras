@@ -1,13 +1,8 @@
 jQuery(document).ready(function ($) {
         $=jQuery;
-        //+ enviar button color coorporative, no longer needed
-        //$("input.wpcf7-form-control.wpcf7-submit").css({"background-color": "#ff765b"});
         var widthW = $(window).width();
-        //console.log(widthW);
         $("form#registerform div").css({"display":"none"});
         if (widthW < 750) {
-            //+ delete header-escuela-desktop on mobile dispositives, no longer needed
-            //$("div#toolbar").css({"display":"none"});
             //remove stiky logo
             //add logo on mobile dispositives
             var newLogoMob = $( '<a href = "http://escueladetriunfadoras.com/"> <img src = "http://escueladetriunfadoras.com/wp-content/uploads/2017/01/Escuela-de-Triunfadora-color.png" style="min-width:255px;" height="50px" width="300px" id = "newLogoMobId"> </a>');
@@ -61,9 +56,13 @@ jQuery(document).ready(function ($) {
 //hide students and comments from http://escueladetriunfadoras.com/register/lp-courses/
 jQuery(document).ready(function ($) {
         $=jQuery;
-        //hide stud and comment in programs
+        //hide students and comment in programs
         $("div#thim-course-archive div#post-6892 .course-students, div#thim-course-archive div#post-6892 .course-comments-count, div#thim-course-archive div#post-6023 .course-students, div#thim-course-archive div#post-6023 .course-comments-count, div#thim-course-archive div#post-7203 .course-comments-count, div#thim-course-archive div#post-7203 .course-students ").hide();
-}); 
+        //hide students and comments in profile.course-students
+        $("div#learn-press-user-profile .thim-course-content .course-meta .course-students").hide();
+        $("div#learn-press-user-profile .thim-course-content .course-meta .course-comments-count").hide();
+});     
+
 
 //hide students and comments from each course
 jQuery(document).ready(function ($) {
@@ -78,6 +77,8 @@ jQuery(document).ready(function ($) {
         $("article#post-6023 .course-summary div#course-landing .course-tabs ul.nav.nav-tabs li:nth-child(4)").hide();
         //hide opiniones sections in footer banner
         $("ul.thim-course-landing-tab li:nth-child(4)").hide();
+        //hide opiniones in profile
+        $(".course-summary div#course-learning ul.nav.nav-tabs li:nth-child(4)").hide();
 
 }); 
 
@@ -87,34 +88,22 @@ jQuery(document).ready(function ($) {
         $("ul.curriculum-sections .meta-left").hide();
 }); 
 
-//color modules
+//loop for color modules
 jQuery(document).ready(function ($) {
         $=jQuery;
         //autoestudio 
-        //$("div#tab-course-curriculum div#learn-press-course-curriculum li#section-214 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-214 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-215 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-216 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-222 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-225 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-230 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-234 h4.section-header").css({"color":"#ff765b"});
-        //premiun
-        $("ul.curriculum-sections li#section-191 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-192 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-193 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-199 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-207 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-211 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-212 h4.section-header").css({"color":"#ff765b"});
-        $("ul.curriculum-sections li#section-213 h4.section-header").css({"color":"#ff765b"});
+        // ASA = array of sections of autoestudio, premium,
+        var ASA = [284, 290, 297, 298, 306, 312, 315, 320, 325, 326, 327];
+        for (var i = ASA.length - 1; i >= 0; i--) {
+            $("ul.curriculum-sections li#section-" + ASA[i] + " h4.section-header").css({"color":"#ff765b"});
+        };
 }); 
 
-//loop
+//loop for selz buttons
 
 jQuery(document).ready(function ($) {
         $=jQuery;
-        // ASTC = ArrayofCoursesSelzThimPressCodes
+        // ASTC = Array of widgets Selz and Thim Press Codes
         var ASTC = [[7203,"VyvbVY$YM"],[6892,"Vk9hw87-f"],[6023,"VyIFUC$OG"]];
         for (var i = ASTC.length - 1; i >= 0; i--) {
 
