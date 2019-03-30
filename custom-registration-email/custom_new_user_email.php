@@ -5,7 +5,7 @@ Plugin Name: Custom New User Email Escuela de Triunfadoras
 Plugin URI: http://URI_De_La_Página_Que_Describe_el_Plugin_y_Actualizaciones
 Description: Changes the copy in the email sent out to new users
 Version: El número de versión del plugin e.j.: 1.0
-Author: Jose GAllo
+Author: Jose Gallo
 Author URI: http://josegallo.net
 License: GPL2
 */
